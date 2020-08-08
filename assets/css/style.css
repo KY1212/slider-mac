@@ -1,0 +1,113 @@
+* {
+  box-sizing: inherit
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #eeeeee;
+}
+
+img {
+  vertical-align: bottom;
+  width:100%;
+}
+
+/*=====main=====*/
+main {
+  padding: 100px 0 480px;
+}
+
+.heading {
+  font-size: 52px;
+  line-height: 1;
+  text-align: center;
+}
+
+/*=====slider=====*/
+.sliderWrap {
+  margin: 20px auto 0;
+  width: 607px;
+}
+
+.slider {
+  height: 342px;
+  position: relative;
+  border: solid 10px #fff;
+  overflow: hidden;
+}
+
+.slider .slides {
+  position: absolute;
+  display: flex;
+  left: -100%;
+}
+
+.slider .slide {
+  width: 587px;
+  height: 322px;
+}
+
+/*=====indicator=====*/
+.indicator {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.indicator .item {
+  border-radius: 50%;
+  background-color: #999999;
+  width: 10px;
+  height: 10px;
+  cursor: pointer;
+}
+
+.indicator .item.is-active {
+  background-color: #fff;
+}
+
+.indicator .item + .item{
+  margin-left: 10px;
+}
+
+/*=====btnGroup=====*/
+.btnGroup {
+  display: flex;
+  justify-content: space-between;
+  width: calc(100% - 20px);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.btnGroup .btn {
+  border-radius: 50%;
+  width: 21px;
+  height: 21px;
+  background-color: #fff;
+  cursor: pointer;
+  position: relative;
+}
+
+.btnGroup .btn::before {
+  content: "";
+  border: 7px solid transparent;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.btnGroup .prev.btn::before {
+  border-right: 11px solid #00566F;
+  right: 7px;
+}
+
+.btnGroup .next.btn::before {
+  border-left: 11px solid #00566F;
+  left: 7px;
+}
+
